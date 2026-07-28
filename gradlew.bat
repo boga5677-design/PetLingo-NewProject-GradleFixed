@@ -1,9 +1,8 @@
 @echo off
-set GRADLE_VERSION=8.9
 where gradle >nul 2>nul
-if %errorlevel%==0 (
-  gradle %*
-  exit /b %errorlevel%
+if errorlevel 1 (
+  echo ERROR: Gradle is not installed or not available in PATH.
+  echo Install Gradle 8.10.2 or use the included GitHub Actions workflow.
+  exit /b 1
 )
-echo Gradle is not installed. Please install Gradle 8.9 or run the project with Android Studio.
-exit /b 1
+gradle %*

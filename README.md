@@ -1,24 +1,23 @@
-# PetLingo 2.0
+# PetLingo Rebuilt
 
-全新 Jetpack Compose 英文學習 App。
+全新重建的 Android 英文學習 App，採 Kotlin、Jetpack Compose、Material 3 與 Java 17。
 
-## 本版新增
+## 已完成
 
-- 詳細學習記錄：單字聆聽、閱讀完成、測驗結果、口說分數與時間。
-- 錯題記錄：保留作答內容、正確答案與解釋，可獨立篩選。
-- 測驗即時回饋：答對／答錯顏色、圖示、正確答案及解析。
-- 口說評分：使用 Android 語音辨識，依目標句與辨識結果的字詞及字元相似度給 0–100 分，列出需要加強的字詞。
-- 英式／美式發音：單字頁與口說頁均可切換，使用 Locale.UK／Locale.US。
-- 本機持久化：收藏、口音設定與最多 500 筆學習記錄儲存在 SharedPreferences。
+- 英式／美式 TTS 發音切換
+- 單字搜尋與收藏
+- 測驗即時正確／錯誤提示
+- 錯題本與詳細學習紀錄
+- 每次測驗保存題目、作答、正解、分數、說明與時間
+- Android Speech Recognizer 口說辨識
+- 0–100 文字相似度口說練習評分
+- 關閉 App 後仍保存紀錄、收藏與口音設定
+- GitHub Actions 自動產生 Debug APK
 
 ## 建置
 
-需要 JDK 17。執行：
+GitHub：推送到 `main`，開啟 Actions，下載 `PetLingo-APK` artifact。
 
-```bash
-./gradlew assembleDebug
-```
+Android Studio：使用 JDK 17 開啟專案，等待 Gradle Sync 後執行 `app`。
 
-或推送到 GitHub，使用內附 GitHub Actions 產生 APK。
-
-> 口說分數是以裝置語音辨識結果進行文字相似度評估，適合日常練習回饋，不等同專業音素或口音測驗。
+> 口說分數是手機語音辨識結果與目標文字的相似度，適合日常練習，不是專業音素評測。
