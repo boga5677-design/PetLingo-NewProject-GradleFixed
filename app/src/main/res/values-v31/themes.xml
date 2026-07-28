@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.PetLingo" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#FFF9F2</item>
+        <item name="android:navigationBarColor">#FFF9F2</item>
+        <item name="android:windowSplashScreenBackground">#FFF1E8</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">#F59AA6</item>
+    </style>
+</resources>
