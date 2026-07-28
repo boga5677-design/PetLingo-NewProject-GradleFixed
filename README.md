@@ -47,3 +47,11 @@ chmod +x gradlew
 這個啟動腳本是為 GitHub Actions 建置環境設計，不包含二進位
 `gradle-wrapper.jar`。如果要在完全沒有安裝 Gradle 的電腦離線建置，
 需要另外由 Android Studio 或 Gradle 產生官方 Wrapper。
+
+
+## 2026-07 編譯修正
+
+- 已在 `PetLingoApp.kt` 加入 `@OptIn(ExperimentalMaterial3Api::class)`。
+- 修正 Material3 `TopAppBar` 實驗 API 導致的 Kotlin 編譯失敗。
+- GitHub Actions 固定使用 Java 17 與 Gradle 8.10.2。
+- Workflow 改為直接執行 `gradle :app:assembleDebug`，避免環境中的其他 Gradle 版本干擾。

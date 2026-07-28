@@ -28,6 +28,7 @@ private enum class Tab(val title: String) {
     HOME("首頁"), WORDS("單字"), READING("閱讀"), SPEAK("口說"), QUIZ("測驗"), FAVORITES("收藏"), MORE("更多")
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PetLingoApp(vm: PetLingoViewModel) {
     val state by vm.state.collectAsStateWithLifecycle()
