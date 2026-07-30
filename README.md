@@ -1,23 +1,27 @@
-# PetLingo Rebuilt
+# PetLingo Kids 3.0
 
-全新重建的 Android 英文學習 App，採 Kotlin、Jetpack Compose、Material 3 與 Java 17。
+幼兒英文互動闖關版。
 
-## 已完成
+## 3.0 新功能
 
-- 英式／美式 TTS 發音切換
-- 單字搜尋與收藏
-- 測驗即時正確／錯誤提示
-- 錯題本與詳細學習紀錄
-- 每次測驗保存題目、作答、正解、分數、說明與時間
-- Android Speech Recognizer 口說辨識
-- 0–100 文字相似度口說練習評分
-- 關閉 App 後仍保存紀錄、收藏與口音設定
-- GitHub Actions 自動產生 Debug APK
+- 玳瑁貓、虎斑貓、長毛吉娃娃三位吉祥物
+- 吉祥物簡易上下動態效果
+- 答對時正向鼓勵動畫與提示音
+- 10 關聽音選圖關卡
+- 星星與成就系統
+- 幼兒大圖卡：英文、中文、TextToSpeech 發音
+- 保留 `toeic_words.tsv` 進階字庫（目前檔案含 8000 筆，可搜尋 7000+ 單字）
+- 套件 ID 改為 `com.petlingo.kids`，可與舊版並存
+- GitHub Actions 使用 JDK 17，成功後自動上傳 APK
 
-## 建置
+## GitHub 建置
 
-GitHub：推送到 `main`，開啟 Actions，下載 `PetLingo-APK` artifact。
+1. 將本 ZIP 解壓後所有檔案上傳到 GitHub Repository 根目錄。
+2. 刪除 Repository 內其他舊 `.github/workflows/*.yml`。
+3. 到 **Actions → Build PetLingo Kids 3.0 APK → Run workflow**。
+4. 完成後，在 Artifacts 下載 `PetLingo-Kids-3.0-APK`。
+5. 解壓 Artifact，安裝 `PetLingo-Kids-3.0.apk`。
 
-Android Studio：使用 JDK 17 開啟專案，等待 Gradle Sync 後執行 `app`。
+## 安裝提醒
 
-> 口說分數是手機語音辨識結果與目標文字的相似度，適合日常練習，不是專業音素評測。
+新版套件名稱是 `com.petlingo.kids`，正常情況可與 `com.petlingo.app` 舊版同時存在。
